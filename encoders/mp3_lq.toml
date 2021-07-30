@@ -1,0 +1,3 @@
+extension = "mp3"
+encoder = "ffmpeg"
+command_line = "-i <inputfile> <outputfile>"

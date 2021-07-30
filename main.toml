@@ -1,0 +1,4 @@
+storage_path = "/tmp/Music"
+music_files_template = "<artist> - <title>"
+conversion_format = "mp3_hq"
+convert = "None"
