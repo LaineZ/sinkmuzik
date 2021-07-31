@@ -4,11 +4,11 @@ use anyhow::{Result, bail};
 
 const USAGE_MSG: &str = "
 USAGE:
-    roggen [action: convert, preview] [music directory]
+    sinkmusik [action: sync, preview] [music directory]
 ";
 
 pub enum Action {
-    Convert,
+    Sync,
     Preview
 }
 
@@ -27,7 +27,7 @@ impl CmdlineOptions {
 
         let act;
         match args[1].to_lowercase().as_str() {
-            "convert" => act = Some(Action::Convert),
+            "sync" => act = Some(Action::Sync),
             "preview" => act = Some(Action::Preview),
             _ => { act = None }
         }

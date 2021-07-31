@@ -29,7 +29,6 @@ impl AudioFile {
         let ctx = ffmpeg_next::format::input(&orig_path)?;
 
         let mut template = config.music_files_template.clone();
-
         let mt = ctx.metadata();
 
         if mt.iter().count() == 0 {
@@ -41,7 +40,6 @@ impl AudioFile {
         }
 
         let new_path = config.storage_path.clone().join(template);
-
         let lossless = is_lossless(orig_path.extension().unwrap().to_str().unwrap());
 
         Ok(AudioFile {
