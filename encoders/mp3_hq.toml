@@ -1,3 +1,12 @@
+# HQ MP3 320k encoder preset file
+# to use it go to main.toml and set
+# conversion_format = "mp3_hq"
+
+# output file extension
 extension = "mp3"
+# encoder binary path
 encoder = "ffmpeg"
+# command line options for encoder. With template, where:
+#  <inputfile> - full path to original file
+#  <outputfile> - full path to synced file
 command_line = "-i <inputfile> -codec:a libmp3lame -b:a 320k <outputfile>"

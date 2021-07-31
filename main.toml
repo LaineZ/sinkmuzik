@@ -1,4 +1,11 @@
+# Base path for syncronization directory
 storage_path = "/tmp/Music"
+# Naming template for music files in base path
 music_files_template = "<artist> - <title>"
+# Conversion preset filename located in encoders/ folder
 conversion_format = "mp3_hq"
+# On-fly convertion settings
+#  None - Do not process file encoder for files, just copy
+#  IfNotSame - Only convert files not formatted as conversion extension
+#  OnlyLossless - Convert only files with lossless format (wav, flac, aiff, m4a)
 convert = "None"
